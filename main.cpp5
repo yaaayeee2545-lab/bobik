@@ -1,0 +1,69 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
+
+int main() {
+    SetConsoleOutputCP(1251);
+    SetConsoleCP(1251);
+
+    char operation;
+    double num1, num2, result;
+
+    
+    cout << "[ + ] Калькулятор" << endl;
+    cout << "[ + ] Доступные операции:" << endl;
+    cout << "[ 1 ] Сложение (+)" << endl;
+    cout << "[ 2 ] Вычитание (-)" << endl;
+    cout << "[ 3 ] Умножение (*)" << endl;
+    cout << "[ 4 ] Деление (/)" << endl;
+    cout << "[ 5 ] Остаток от деления (%)" << endl;
+    cout << endl;
+
+    
+    cout << "[ + ] Выберите операцию (+, -, *, /, %): ";
+    cin >> operation;
+
+    
+    cout << "[ + ] Введите первое число: ";
+    cin >> num1;
+    cout << "[ + ] Введите второе число: ";
+    cin >> num2;
+
+    
+    if (operation == '+') {
+        result = num1 + num2;
+        cout << "[ + ] Результат: " << num1 << " + " << num2 << " = " << result << endl;
+    }
+    else if (operation == '-') {
+        result = num1 - num2;
+        cout << "[ + ] Результат: " << num1 << " - " << num2 << " = " << result << endl;
+    }
+    else if (operation == '*') {
+        result = num1 * num2;
+        cout << "[ + ] Результат: " << num1 << " * " << num2 << " = " << result << endl;
+    }
+    else if (operation == '/') {
+        
+        if (num2 != 0) {
+            result = num1 / num2;
+            cout << "[ + ] Результат: " << num1 << " / " << num2 << " = " << result << endl;
+        }
+        else {
+            cout << "[ - ] Ошибка! Деление на ноль запрещено." << endl;
+        }
+    }
+    else if (operation == '%') {
+        
+        if (num2 != 0) {
+            result = (int)num1 % (int)num2; 
+            cout << "[ + ] Результат: " << (int)num1 << " % " << (int)num2 << " = " << result << endl;
+        }
+        else {
+            cout << "[ - ] Ошибка! Деление на ноль запрещено." << endl;
+        }
+    }
+    else {
+        cout << "[ - ] Ошибка! Неверная операция." << endl;
+    }
+
+    return 0;
