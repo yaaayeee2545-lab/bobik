@@ -1,1 +1,52 @@
+#include <iostream>
+using namespace std;
 
+int main() {
+
+	setlocale(LC_ALL, "");
+
+	float a;
+	float b;
+	float c;
+	char g = 0;
+
+	cout << "введите число:";
+	cin >> a;
+
+	cout << "выберите:+,-,*,/,% " << endl;
+	cin >> g;
+
+	cout << "введите второе число:";
+	cin >> b;
+
+	if (b == 0 and g=='/') {
+		cout << "Делить на 0 нельзя";
+	}
+
+	if (g == '+') {
+		c = a + b;
+		cout << c;
+	}
+
+	else if (g == '-') {
+		c = a - b;
+		cout << c;
+	}
+
+	else if (g == '*') {
+		c = a * b;
+		cout << c;
+	}
+
+	else if (g == '/') {
+		c = a / b;
+		cout << c;
+	}
+
+	else if (g == '%') {
+		c = (int)a % (int)b;
+		cout << c;
+	}
+
+	return 0;
+}
