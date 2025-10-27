@@ -1,1 +1,37 @@
+#include <iostream>
+using namespace std;
 
+int main() {
+
+	setlocale(LC_ALL, "");
+	
+	int winter = 1;
+	int summer = 2;
+	int fall = 3;
+	int spring = 4;
+
+	cout << "Ведите число:Зима - 1 " << endl;
+	cout << "Лето - 2" << endl;
+	cout << "Осень - 3" << endl;
+	cout << "Весна - 4" << endl;
+	
+	int answer;
+	cin >> answer;
+	
+	if (answer == 1) {
+		cout << "сейчас зима, очень холодно";
+	}
+	
+	if (answer == 2) {
+		cout << "сейчас лето, очень жарко";
+	}
+	
+	if (answer == 3) {
+		cout << "сейчас осень, холодно";
+	}
+	
+	if (answer == 4) {
+		cout << "сейчас весна, тепло";
+	}
+return 0;
+}
